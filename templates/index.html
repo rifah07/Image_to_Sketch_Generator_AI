@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image to Sketch</title>
+</head>
+<body>
+    <h2>Upload an image to convert it to a sketch</h2>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <button type="submit">Upload</button>
+    </form>
+    {% if sketch_url %}
+        <h2>Sketch:</h2>
+        <img src="{{ sketch_url }}" alt="Sketch">
+    {% endif %}
+</body>
+</html>
